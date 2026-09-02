@@ -18,9 +18,7 @@ export default function InfiniteSlider() {
       style={{ overscrollBehavior: "none" }}
     >
       <div className="absolute top-45 left-6 text-black z-50">
-        <h1 className="header-text w-1/2">
-          Krafting Kultur3
-        </h1>
+        <h1 className="header-text w-1/2">Krafting Kultur3</h1>
       </div>
 
       {Array.from({ length: slideCount }).map((_, i) => {
@@ -33,7 +31,7 @@ export default function InfiniteSlider() {
             }}
             className="group absolute left-0 bottom-0 hover:cursor-pointer overflow-hidden will-change-[transform,width,height]"
           >
-            {/* eslint-disable-next-line @next/next/no-img-element -- imperatively swapped every frame; next/image's optimization doesn't apply here */}
+            {/* eslint-disable-next-line */}
             <img
               ref={(el) => {
                 imgRefs.current[i] = el;
