@@ -1,0 +1,16 @@
+import ConditionalFooter from "./components/layout/conditional-footer";
+import Navbar from "./components/layout/navbar";
+
+export default function MarketingLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <>
+      <Navbar />
+      {children}
+      <ConditionalFooter />
+    </>
+  );
+}
