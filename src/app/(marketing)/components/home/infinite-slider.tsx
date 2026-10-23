@@ -23,10 +23,10 @@ export default function InfiniteSlider() {
       className="relative w-full h-svh overflow-hidden touch-none active:cursor-grabbing select-none"
       style={{ overscrollBehavior: "none" }}
     >
-      <div className="absolute top-45 left-6 text-black z-50">
-        <h1 className="header-text w-[80%]">
-          C<span className="inline-block -scale-x-100">r</span>ay Creativ
-          <span className="inline-block -scale-x-100">e</span>
+      <div className="absolute top-35 left-6 text-black z-50">
+        <h1 className="header-text w-[80%] flex flex-col">
+          <span>Imagination</span> 
+          <span>execution</span>
         </h1>
       </div>
 

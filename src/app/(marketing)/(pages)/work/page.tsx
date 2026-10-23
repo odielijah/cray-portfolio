@@ -82,7 +82,7 @@ const Work = () => {
         <h1 className="flex flex-col header-text translate-y-[0.08em]">
           <span>Our</span>
           <div>
-            Wor<span className="inline-block -scale-x-100">k</span>
+            Wor<span className="inline-block -scale-x-100 ml-[0.02em]">k</span>
           </div>
         </h1>
         <p className="w-130 mr-10 text-xl mb-1">

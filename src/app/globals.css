@@ -9,9 +9,12 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-heading: var(--font-mango-grotesque-semibold);
+  --font-heading: var(--font-bebas-neue);
+  --font-heading-alt: var(--font-mango-grotesque-semibold);
   --font-subheading: var(--font-mango-grotesque-regular);
   --font-sans: var(--font-barlow);
+  --color-footer: #ffffff;
+  --color-footer-foreground: #000000;
 }
 
 html,
@@ -33,6 +36,35 @@ body {
 
 @layer components {
   .header-text {
-    @apply uppercase font-heading text-7xl leading-[0.8] md:text-[14rem];
+    @apply uppercase font-heading text-7xl leading-[0.8] md:text-[14rem] tracking-[-0.03em];
+  }
+
+  .header-text-alt {
+    @apply uppercase font-heading-alt text-7xl leading-[0.8] md:text-[14rem];
+  }
+
+  /* Footer */
+  .footer {
+    @apply bg-footer text-footer-foreground;
+  }
+
+  .footer-section {
+    @apply flex flex-col gap-6;
+  }
+
+  .footer-heading {
+    @apply text-lg;
+  }
+
+  .footer-link {
+    @apply transition-opacity hover:opacity-50;
+  }
+
+  .footer-wordmark {
+    @apply block translate-y-[0.08em] -mt-10 -mb-5 -mx-6 whitespace-nowrap font-heading text-[clamp(24.8rem,18.5vw,28rem)] leading-[0.9] tracking-[-0.03em];
+  }
+
+  .footer-wordmark-flip {
+    @apply inline-block -scale-x-100 tracking-normal;
   }
 }

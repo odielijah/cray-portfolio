@@ -1,18 +1,34 @@
 import Link from "next/link";
 import Logo from "@/app/(marketing)/components/shared/logo";
 
-const rightLinks = [
+const rightLinksData = [
   { label: "Work", href: "/work" },
   { label: "Services", href: "/services" },
   { label: "Merch", href: "/merch" },
   { label: "Contact", href: "/contact" },
 ];
 
+export function RightLinks() {
+  return (
+    <div className="flex items-center justify-end gap-[3vw]">
+      {rightLinksData.map((link) => (
+        <Link
+          key={link.href}
+          href={link.href}
+          className="pointer-events-auto text-md"
+        >
+          {link.label}
+        </Link>
+      ))}
+    </div>
+  );
+}
+
 export default function Navbar() {
   return (
     <>
       {/* Blended layer: links only */}
-      <header className="pointer-events-none fixed z-99 flex min-h-14 w-full items-center px-6 py-5 text-sm uppercase text-white mix-blend-difference">
+      <header className="pointer-events-none fixed z-99 flex min-h-14 w-full items-center px-6 py-5 text-white mix-blend-difference">
         <nav className="flex w-full items-center justify-between">
           <div className="flex items-center justify-start gap-[5vw]">
             {/* Invisible spacer so links stay where they were */}
@@ -21,17 +37,7 @@ export default function Navbar() {
             </div>
           </div>
 
-          <div className="flex items-center justify-end gap-[5vw]">
-            {rightLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className="pointer-events-auto text-[12.5px]"
-              >
-                {link.label}
-              </Link>
-            ))}
-          </div>
+          <RightLinks />
         </nav>
       </header>
 
